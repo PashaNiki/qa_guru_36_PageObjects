@@ -6,11 +6,11 @@ import pages.RegistrationPages;
 public class RegistrationWithFakerTests extends TestBase {
 
     RegistrationPages registrationPages = new RegistrationPages();
-    TestData data = new TestData();
 
     @Test
     void successfulRegistrationWithFakerTest() {
-        registrationPages.openPage();
+        TestData data = new TestData();
+
         registrationPages
                 .openPage()
                 .setFirstName(data.firstName)
