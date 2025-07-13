@@ -1,15 +1,15 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPages;
+import pages.RegistrationPage;
 
 public class RegistrationWithPageObjectsTests extends TestBase {
 
-    RegistrationPages registrationPages = new RegistrationPages();
+    RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
     void successfulRegistrationTest() {
-        registrationPages.openPage()
+        registrationPage.openPage()
                 .setFirstName("Oleg")
                 .setLastName("Shirobokov")
                 .setEmail("shirobokov@mail.ru")
@@ -37,7 +37,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
     @Test
     void successfulMinFormTest() {
-        registrationPages.openPage()
+        registrationPage.openPage()
                 .setFirstName("Oleg")
                 .setLastName("Shirobokov")
                 .setEmail("shirobokov@mail.ru")
@@ -50,7 +50,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
     @Test
     void negativeFormTest() {
-        registrationPages.openPage()
+        registrationPage.openPage()
                 .setFirstName("Oleg")
                 .setLastName("Shirobokov")
                 .setEmail("")
