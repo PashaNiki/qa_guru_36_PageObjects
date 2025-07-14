@@ -15,8 +15,11 @@ public class TestData {
     public final String phone = faker.phoneNumber().subscriberNumber(10);
     public final String address = faker.address().streetAddress();
 
-    public final String day = String.format("%02d", faker.number().numberBetween(1, 30));
-    public final String month = faker.options().option("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+    public final String day = String.format("%02d", faker.number().numberBetween(1, 29));
+    public final String month = faker.options().option(
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+    );
     public final String year = String.valueOf(faker.number().numberBetween(1980, 2005));
 
     public final String gender = faker.options().option("Male", "Female", "Other");
